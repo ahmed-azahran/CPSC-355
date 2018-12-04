@@ -1,0 +1,507 @@
+Script started on 2018-10-10 15:46:28-06:00
+No such schema “org.gnome.gedit.preferences.editor”
+]0;ahmed.zahran1@csa1:~/CPSC355/Assignments/Assignment2/assign2aahmed.zahran1@csa1:~/CPSC355/Assignments/Assignment2/assign2a$ gdb assign2a.out
+GNU gdb (GDB) Fedora 8.1.1-3.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign2a.out...done.
+(gdb) b main 
+Breakpoint 1 at 0x400614: file assign2a.s, line 30.
+(gdb) b falsw[Ke
+Breakpoint 2 at 0x40065c: file assign2a.s, line 55.
+(gdb) continue
+The program is not being run.
+(gdb) b continuebcontinue continue
+Breakpoint 3 at 0x400670: file assign2a.s, line 68.
+(gdb) b continue[C1
+Breakpoint 4 at 0x400684: file assign2a.s, line 75.
+(gdb) b test 
+Breakpoint 5 at 0x400690: file assign2a.s, line 85.
+(gdb) b donme [K[K[Ke
+Breakpoint 6 at 0x400698: file assign2a.s, line 89.
+(gdb) b 115
+Breakpoint 7 at 0x4006e0: file assign2a.s, line 115.
+(gdb) b [K[Kr
+Starting program: /home/ugd/ahmed.zahran1/CPSC355/Assignments/Assignment2/assign2a/assign2a.out 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-32.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, main () at assign2a.s:30
+30	main:       stp         x29, x30, [sp, -16]!              // Save frame pointer (fp, x29) and link register (lr, x30) to stock, allocating 16 bytes, ore_increment SP
+(gdb) c
+Continuing.
+multiplier = 0x00000046 (70) multiplicand = 0xfefefefe (-16843010)
+
+
+Breakpoint 2, false () at assign2a.s:55
+55	false:      mov         w27, 0                     // If it is false, make true/false register to 0
+(gdb) p $w20
+$1 = 70
+(gdb) p $w20[K1
+$2 = 4278124286
+(gdb) p $w21[K2
+$3 = 0
+(gdb) p $w22[1P22x22[C[K[C2[C[K3
+$4 = 0
+(gdb) p $x23[1P23w23[C[C[K[K19
+$5 = 0
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) p [1Pcp $w19x23w19c[Kp $w19x23w221[K0
+$6 = 35
+(gdb) p $w20c[Kp $w19x23w221
+$7 = 4278124286
+(gdb) p $w210c[Kp $w19x23w22
+$8 = 0
+(gdb) p $w2210c[Kp $w19x23w19
+$9 = 0
+(gdb) p $w19[K[K[K[K[K[Kc
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) cp $w19
+$10 = 1
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) cp $w19c[Kp $w192210
+$11 = 17
+(gdb) p $w20c[Kp $w19c[Kp $w192212
+$12 = 4278124286
+(gdb) p $w220c[Kp $w19c[Kp $w19221
+$13 = 4278124286
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) cp $w2120c[Kp $w19
+$14 = 2
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) cp $w19c[Kp $w21
+$15 = 4278124286
+(gdb) p $w21c[Kp $w19c[Kp $w212
+$16 = 4269702781
+(gdb) p $w221c[Kp $w19c[Kp $w2120
+$17 = 17
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) cp $w20
+$18 = 2147483656
+(gdb) p $w20c[Kp $w202
+$19 = 4282335038
+(gdb) p $w220c[Kp $w2021
+$20 = 4278124286
+(gdb) p $w2120c[Kp $w2021c[Kp $w19c[Kp $w2120c[Kp $w20[K3
+$21 = 0
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 4, continue1 () at assign2a.s:75
+75	continue1:  and         w20, w20, 0x7FFFFFFF    // update the multiplier via and operation
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 3, continue () at assign2a.s:68
+68	            asr         w20, w20, 1             // do an arithmetic shift right on the w_multiplier by 1
+(gdb) c
+Continuing.
+
+Breakpoint 5, test () at assign2a.s:85
+85	test:       cmp         w19, 32			// compare the loop register value with 32
+(gdb) c
+Continuing.
+
+Breakpoint 6, done () at assign2a.s:89
+89	            cmp         w27, 0		       	// compares the multiplier register with zero to see if it is positive or negative 
+(gdb) c
+Continuing.
+product = 0xffffffff multiplier = 0xb9b9b974 
+
+Breakpoint 7, else () at assign2a.s:116
+116	            bl          printf                          // Call the printf() function
+(gdb) c
+Continuing.
+64_bit result = 0xffffffffb9b9b974 (-1179010700)
+[Inferior 1 (process 15492) exited normally]
+(gdb) c[Kc
+The program is not being run.
+(gdb) q
+]0;ahmed.zahran1@csa1:~/CPSC355/Assignments/Assignment2/assign2aahmed.zahran1@csa1:~/CPSC355/Assignments/Assignment2/assign2a$ exit 
+exit
+
+Script done on 2018-10-10 15:54:44-06:00
