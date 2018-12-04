@@ -1,0 +1,335 @@
+Script started on 2018-09-27 10:57:54-06:00
+]0;ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1$ gdb assign1aOut
+GNU gdb (GDB) Fedora 8.1.1-3.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign1aOut...done.
+(gdb) b loo[[Kp
+Breakpoint 1 at 0x400610: file assign1a.s, line 26.
+(gdb) display [K/i $pc
+1: x/i $pc
+<error: No registers.>
+(gdb) r
+Starting program: /home/ugd/ahmed.zahran1/CPSC355/Assignments/Assignment1/assign1aOut 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-32.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, loop () at assign1a.s:26
+warning: Source file is more recent than executable.
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) ni
+27	      // calculations of the seperate terms
+1: x/i $pc
+=> 0x400614 <loop+4>:	mul	x25, x21, x21
+(gdb) ni
+28		
+1: x/i $pc
+=> 0x400618 <loop+8>:	mul	x26, x21, x25
+(gdb) ni
+30	      mul x25,x21,x21       // = x*x
+1: x/i $pc
+=> 0x40061c <loop+12>:	mul	x25, x25, x23
+(gdb) ni
+31	      mul x26,x21,x25       // = x*x*x
+1: x/i $pc
+=> 0x400620 <loop+16>:	mul	x26, x26, x22
+(gdb) ni
+35	      
+1: x/i $pc
+=> 0x400624 <loop+20>:	add	x26, x26, x25
+(gdb) ni
+36	      // calculations for y
+1: x/i $pc
+=> 0x400628 <loop+24>:	add	x26, x26, x19
+(gdb) ni
+37	     
+1: x/i $pc
+=> 0x40062c <loop+28>:	add	x26, x26, #0x1f
+(gdb) ni
+39	      add x26,x26,x19      // = -5x^3 - 3x^2 + 4x
+1: x/i $pc
+=> 0x400630 <loop+32>:	cmp	x26, x20
+(gdb) ni
+40	      add x26,x26,31      // = -5x^3 - 3x^2 + 4x + 31
+1: x/i $pc
+=> 0x400634 <loop+36>:	b.gt	0x40063c <max>
+(gdb) ni
+max () at assign1a.s:44
+44	      b print		// branches to print uncondtionaly 
+1: x/i $pc
+=> 0x40063c <max>:	mov	x20, x26
+(gdb) ni
+print () at assign1a.s:49
+49	
+1: x/i $pc
+=> 0x400640 <print>:	adrp	x0, 0x400000
+(gdb) S[Kp $x20
+$1 = -29
+(gdb) p $x20[4Pni
+50	
+1: x/i $pc
+=> 0x400644 <print+4>:	add	x0, x0, #0x594
+(gdb) ni
+52	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+1: x/i $pc
+=> 0x400648 <print+8>:	mov	x2, x26
+(gdb) ni
+53	      add  x0, x0, :lo12:fmt       // Set the 1st argument of printf(fmt, var1, var2...) (lower 12 bits)
+1: x/i $pc
+=> 0x40064c <print+12>:	mov	x1, x21
+(gdb) ni
+54	     
+1: x/i $pc
+=> 0x400650 <print+16>:	mov	x3, x20
+(gdb) ni
+56	      mov x1,x21		 // moves the x value to x1 register to be returned
+1: x/i $pc
+=> 0x400654 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) ni
+   The current x value: -6 
+   The curent y value: -29 
+   The current maximum: -29 
+ 
+59	      bl   printf 		// Call the printf() function
+1: x/i $pc
+=> 0x400658 <print+24>:	add	x21, x21, #0x1
+(gdb) p$[K $x1
+$2 = 0
+(gdb) p $x1[K2
+$3 = 2537974328107628288
+(gdb) p $x2[K3
+$4 = 0
+(gdb) p $x321[3Pni
+60	      // End of code inside the loop
+1: x/i $pc
+=> 0x40065c <print+28>:	b	0x400608 <test>
+(gdb) ni
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) ni
+27	      // calculations of the seperate terms
+1: x/i $pc
+=> 0x400614 <loop+4>:	mul	x25, x21, x21
+(gdb) ni
+28		
+1: x/i $pc
+=> 0x400618 <loop+8>:	mul	x26, x21, x25
+(gdb) ni
+30	      mul x25,x21,x21       // = x*x
+1: x/i $pc
+=> 0x40061c <loop+12>:	mul	x25, x25, x23
+(gdb) ni
+31	      mul x26,x21,x25       // = x*x*x
+1: x/i $pc
+=> 0x400620 <loop+16>:	mul	x26, x26, x22
+(gdb) ni
+35	      
+1: x/i $pc
+=> 0x400624 <loop+20>:	add	x26, x26, x25
+(gdb) ni
+36	      // calculations for y
+1: x/i $pc
+=> 0x400628 <loop+24>:	add	x26, x26, x19
+(gdb) ni
+37	     
+1: x/i $pc
+=> 0x40062c <loop+28>:	add	x26, x26, #0x1f
+(gdb) ni
+39	      add x26,x26,x19      // = -5x^3 - 3x^2 + 4x
+1: x/i $pc
+=> 0x400630 <loop+32>:	cmp	x26, x20
+(gdb) ni
+40	      add x26,x26,31      // = -5x^3 - 3x^2 + 4x + 31
+1: x/i $pc
+=> 0x400634 <loop+36>:	b.gt	0x40063c <max>
+(gdb) ni
+41	
+1: x/i $pc
+=> 0x400638 <loop+40>:	b	0x400640 <print>
+(gdb) ni
+print () at assign1a.s:49
+49	
+1: x/i $pc
+=> 0x400640 <print>:	adrp	x0, 0x400000
+(gdb) ni
+50	
+1: x/i $pc
+=> 0x400644 <print+4>:	add	x0, x0, #0x594
+(gdb) p $x20
+$5 = -29
+(gdb) p $x26
+$6 = -139
+(gdb) p S[K$x26[K2
+$7 = -5
+(gdb) p $x2260[4Pni
+52	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+1: x/i $pc
+=> 0x400648 <print+8>:	mov	x2, x26
+(gdb) ni
+53	      add  x0, x0, :lo12:fmt       // Set the 1st argument of printf(fmt, var1, var2...) (lower 12 bits)
+1: x/i $pc
+=> 0x40064c <print+12>:	mov	x1, x21
+(gdb) ni
+54	     
+1: x/i $pc
+=> 0x400650 <print+16>:	mov	x3, x20
+(gdb) ni
+56	      mov x1,x21		 // moves the x value to x1 register to be returned
+1: x/i $pc
+=> 0x400654 <print+20>:	bl	0x400480 <printf@plt>
+(gdb) p $x1
+$8 = -5
+(gdb) p $x1[K2
+$9 = -139
+(gdb) p $x2[K3
+$10 = -29
+(gdb) ni
+   The current x value: -5 
+   The curent y value: -139 
+   The current maximum: -29 
+ 
+59	      bl   printf 		// Call the printf() function
+1: x/i $pc
+=> 0x400658 <print+24>:	add	x21, x21, #0x1
+(gdb) ni
+60	      // End of code inside the loop
+1: x/i $pc
+=> 0x40065c <print+28>:	b	0x400608 <test>
+(gdb) ni
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: -4 
+   The curent y value: -161 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: -3 
+   The curent y value: -125 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: -2 
+   The curent y value: -61 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: -1 
+   The curent y value: 1 
+   The current maximum: 1 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: 0 
+   The curent y value: 31 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: 1 
+   The curent y value: -1 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: 2 
+   The curent y value: -125 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: 3 
+   The curent y value: -371 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: 4 
+   The curent y value: -769 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, loop () at assign1a.s:26
+26	     
+1: x/i $pc
+=> 0x400610 <loop>:	mul	x19, x21, x24
+(gdb) c
+Continuing.
+   The current x value: 5 
+   The curent y value: -1349 
+   The current maximum: 31 
+ 
+[Inferior 1 (process 2841) exited normally]
+(gdb) q
+]0;ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1$ exit 
+exit
+
+Script done on 2018-09-27 11:03:35-06:00

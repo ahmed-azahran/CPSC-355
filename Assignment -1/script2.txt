@@ -1,0 +1,166 @@
+Script started on 2018-09-27 11:07:06-06:00
+^[[A]0;ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1$ exitgdb assign1bOut
+GNU gdb (GDB) Fedora 8.1.1-3.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign1bOut...done.
+(gdb) b print 
+Breakpoint 1 at 0x400640: file assign1b.s, line 75.
+(gdb) b print [K[K[K[K[K[K[K[Kr
+Starting program: /home/ugd/ahmed.zahran1/CPSC355/Assignments/Assignment1/assign1bOut 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-32.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) p $x20
+$1 = -29
+(gdb) c
+Continuing.
+   The current x value: -6 
+   The curent y value: -29 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$2 = -29
+(gdb) p $x20c[Kp $x20r[Kp $x20c[K
+Continuing.
+   The current x value: -5 
+   The curent y value: -139 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$3 = -29
+(gdb) p $x20c[Kp $x20c[K
+Continuing.
+   The current x value: -4 
+   The curent y value: -161 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$4 = -29
+(gdb) p $x20c[K
+Continuing.
+   The current x value: -3 
+   The curent y value: -125 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$5 = -29
+(gdb) p $x20c[K
+Continuing.
+   The current x value: -2 
+   The curent y value: -61 
+   The current maximum: -29 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$6 = 1
+(gdb) p $x20c[K
+Continuing.
+   The current x value: -1 
+   The curent y value: 1 
+   The current maximum: 1 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$7 = 31
+(gdb) p $x20c[K
+Continuing.
+   The current x value: 0 
+   The curent y value: 31 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$8 = 31
+(gdb) p $x20c[K
+Continuing.
+   The current x value: 1 
+   The curent y value: -1 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$9 = 31
+(gdb) p $x20c[K
+Continuing.
+   The current x value: 2 
+   The curent y value: -125 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$10 = 31
+(gdb) p $x20c[K
+Continuing.
+   The current x value: 3 
+   The curent y value: -371 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$11 = 31
+(gdb) p $x20c[K
+Continuing.
+   The current x value: 4 
+   The curent y value: -769 
+   The current maximum: 31 
+ 
+
+Breakpoint 1, print () at assign1b.s:75
+75	      adrp x0, fmt                 // Set the 1st argument of printf(fmt, var1, var2...) (high-order bits)
+(gdb) cp $x20
+$12 = 31
+(gdb) p $x20c[K
+Continuing.
+   The current x value: 5 
+   The curent y value: -1349 
+   The current maximum: 31 
+ 
+[Inferior 1 (process 3874) exited normally]
+(gdb) q
+]0;ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1ahmed.zahran1@csa2:~/CPSC355/Assignments/Assignment1$ gdb assign1bOutexit[K
+exit
+
+Script done on 2018-09-27 11:08:44-06:00
