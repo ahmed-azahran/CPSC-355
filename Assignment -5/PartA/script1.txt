@@ -1,0 +1,76 @@
+Script started on 2018-11-30 11:56:05-07:00
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartAahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartA$ exit[2Plsrm script1.txt[9P./a5a
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be enqueued: 5
+
+Press the return key to continue . . . 
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be enqueued: 1
+
+Press the return key to continue . . . 
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be enqueued: 8
+
+Press the return key to continue . . . 
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 3
+
+Current queue contents:
+ 5 <-- head of queue
+ 1
+ 8 <-- tail of queue
+
+Press the return key to continue . . . 
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 3
+
+Current queue contents:
+ 5 <-- head of queue
+ 1
+ 8 <-- tail of queue
+
+Press the return key to continue . . . 
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 2
+
+Dequeued value is 5
+
+Press the return key to continue . . . 
+[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 3
+
+Current queue contents:
+ 1 <-- head of queue
+ 8 <-- tail of queue
+
+Press the return key to continue . . . 
+[[3J[H[2J### Queue Operations ###
+
+Press 1 - Enqueue, 2 - Dequeue, 3 - Display, 4 - Exit
+Your option? 4
+
+Terminating program
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartAahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartA$ exit 
+exit
+
+Script done on 2018-11-30 11:58:44-07:00

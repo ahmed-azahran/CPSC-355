@@ -1,0 +1,17 @@
+Script started on 2018-11-30 11:46:22-07:00
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ ./a5a[Kb.out 12 25
+December 25th is Winter
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ ./a5b.out 12 25[K[K[K[K[K1 [K[K2 2[K30
+Error: This month doesn't have this number of days
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ ./a5b.out 2 30[K[K[K[K[K 13 2
+Error: Invalid input
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ ./a5b.out 13 2[K[K[K[K11 5
+November 5th is Fall
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ ./a5b.out 11 5[K35
+Error: Invalid input
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ ./a5b.out 11 35[C[1P 352 35[C[C[C[K1
+December 31st is Winter
+]0;ahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartBahmed.zahran1@csa3:~/CPSC355/Assignments/Assignment5/PartB$ exit
+exit
+
+Script done on 2018-11-30 11:48:42-07:00
